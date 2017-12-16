@@ -1,5 +1,11 @@
+[Wiki](https://github.com/bmalbusca/RecrutamentoFST/wiki)
+=========
+
+Neste [repositório](https://github.com/bmalbusca/RecrutamentoFST) podes submeter as tuas tarefas, bem como, aceder aos enunciados das [Tarefas de Recrutamento](https://github.com/bmalbusca/RecrutamentoFST/wiki) através da **Wiki** . Além disso, podes contribuir para a estrutura e conteúdo do repositório através da detecção de [problemas](https://github.com/bmalbusca/RecrutamentoFST/issues) ou [integração](https://github.com/bmalbusca/RecrutamentoFST/projects) de novas features ou informação.  
 
 
+Git
+-------------
 
 Para usar este repositório basta usar os seguintes comandos (E um terminal, pode ser Bash on Ubuntu on Windows, linux ou MacOS) :
 
@@ -39,7 +45,7 @@ Para usar este repositório basta usar os seguintes comandos (E um terminal, pod
 
 - 8º git pull
 
-Feito !
+[Feito !](https://github.com/bmalbusca/RecrutamentoFST/network) 
 =========
 
 Para aprenderes mais um pouco sobre git vê : [github-tutorial](http://product.hubspot.com/blog/git-and-github-tutorial-for-beginners) e/ou  [git-guide]( http://rogerdudler.github.io/git-guide/)
