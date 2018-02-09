@@ -1,0 +1,298 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+ \setlength{\parindent}{4em}
+\setlength{\parskip}{1em}
+\renewcommand{\baselinestretch}{1.0}
+
+
+\begin{document}
+\title{\textbf{Second Recruitment Task}}
+\author{Tiago Santos}
+\date{January 2018}
+\maketitle
+\section{Introduction} 
+\hspace{1cm}The objective of the second task is to have an introduction to Variable Magnetic Fields and to the phenomenon of induction.
+\section{Questions}
+\subsection{To measure the magnetic field in an Area whose section is a square (Length L), a squared spire was introduced. For that, the voltage between terminals was measured. All the sides from the spire have the same resistance and the magnetic field had a temporal variation expressed by:}
+\begin{equation}
+\mathit{B} = B_{0}\textit{t}
+\end{equation}
+\subsubsection{What is the definition of electromotive force?}
+\hspace{1cm}	The electromotive force is the the force that causes current to flow in a circuit, due to the introduction of a voltage. The unit is the $Volt$ and may be given by Faraday's Law (where $d\Phi$ is flux's change and the $minus$ sign corresponds to Lenz's Law that states that the induced current will always flow in a way that counteracts the change in the magnetic field):
+\begin{equation}
+\varepsilon = -\frac{d\Phi }{dt}
+\end{equation}
+
+The flux can be given by (where B e is the flux of the magnetic field and A is the section's area):
+\begin{equation}
+\Phi = \int_SB\vec{n}dS =BAcos\theta 
+\end{equation}
+
+\subsubsection{Determine the expression for the electromotive force in the spire and indicate the induced current direction. Assume that the electromotive force only exists for a second.}
+\hspace{1cm} 
+Because he have a field $B = B_0 t$, and considering a $\theta = 0$, the flux that will penetrate the spire will be given by: 
+\begin{equation}
+\Phi = B_o tl^2
+\end{equation}
+Applying Faraday's Law, that is, derivate the flux expression regarding time (times -1), the $emf$ will be $-B_o l^2$. 
+
+Because of Lenz's Law, the current will run in a clock wise direction (negative), so the field created by the spire will be created so that the field lines inside the spire will have a different direction from the ones of the B field.
+
+\subsubsection{Knowing that the Voltage read by the Voltmeter is 5 $\mu V$  , find $B_{0}$'s value. }
+\hspace{1cm} In the previous question, the electromotive was calculate, having obtained that $emf = -B_ol^2$.
+
+By doing a quick substitution:
+\begin{equation}
+-5 \mu V = -B_0l^2 <=> B_0 = \frac{5 \mu V}{l^2} [T]
+\end{equation}
+
+\subsubsection{Imagine you remove the spire from a field B bath and you put a current in the spire. What is going to be the magnet:ic field inside the spire? }
+In order to calculate Magnetic Fields, there are two main ways to do the task. We can use:
+\begin{itemize}
+\item \textbf{Biot-Savart's Law}
+This Law is used to calculate the magnetic field produced by a dl (tiny length of a path, that may be considered as a point) and it is stated:
+\begin{equation}
+\partial \vec{B} = \frac{\mu _0}{4 \pi} \frac{I d\vec{l}\times \vec{R}}{R^2}
+\end{equation}
+\item \textbf{Ampere's Law}
+Ampere's Law is given by:
+\begin{equation}
+\oint Bd\vec{l} = \mu _0 I \, \, \, \, \left ( I \,being \,enclosed \right )
+\end{equation}
+Ampere's Law is used when we have symmetries. 
+\end{itemize}
+
+
+Regarding the enunciated, because it is symmetrical, we can calculate the magnetic field inside the spire by using Ampere's Law. To do that we will approximate Amperes' Law of a Solenoid to one spire, by have n (spire's density) equal to 1.
+
+Imagine we have a 3 spire solenoid, each one apart by L/2, being the solenoid length L. Remember that the square width is L. The lower vertex most left vertex of the solenoid will be considered as the point (0,0). Now we are going to chose a closed loop. We choose a rectangle ABCD, such that A = (L/4,3L/4), B = (3L/4, 3L/4), C = (3L/4, 5L/4) and D = (L/4, 5L/4). 
+
+As we can see, BC and AD are going to be perpendicular to the B field created by the solenoid (We can consider a constant magnetic field inside the solenoid, with field lines parallel to the normal vector of the solenoid's cross-section). CD is going to b outside of the solenoid, where it is know that the magnetic field will be near zero.
+
+
+The trace AB is the only line segment that is going to interact with the B field. Using Ampere's Law for coils we have that:
+\begin{equation}
+B\frac{L}{3} = \frac{L}{3L}N\mu _0 I = n\mu_0I
+\end{equation}
+As we considered n equal to 1, the Magnetic fild inside the spire will be $\mu_0I$.
+
+\subsection{Then, the shape of the spire was approximated to a circle. The modified spire has a section of radius r and, in the same placed, it were rolled n-1 more equal spires. Consider the coil (formed by the set of the spires) of radius r, length $ L >> r$ and density of spires n. Assume that the coil is partially filled with a ferromagnetic nucleus of radius r and magnetic permeability $\mu$. (The coil is rolled up in a cylinder).}
+
+\subsubsection{What is the definition of magnetic permeability?}
+\hspace{1cm} Permeability is the capacity of a material to allow the formation of a magnetic field within itself. It is the degree of magnetization of a material, when surrounded by a magnetic field.
+It is represent by the Greek letter $\mu$.
+
+\subsubsection{What is the definition of auto-inductance coefficient? And the definition of mutual inductance coefficient? } 
+
+\hspace{1cm} Inductance is the ability of a component to oppose the change of the current flowing within it. When an inductor changes its magnetic field, this change induces an emf within the conductor itself. When an $emf$ is induced in the same circuit that is changing its current, the effect is called \textbf{Self-induction} ($L$). When the $emf$ is induced in a different circuit, adjacent to the one changing its magnetic field, the $emf$ is induced by \textbf{Mutual Induction}. Usually, \textbf{Self-inductance} is called \textbf{Inductance} or \textbf{Auto-induction  coefficient} and its unit is \textbf{Henry} ($H$). In a coil, L is given by: 
+
+\begin{equation}
+L = N\frac{\Phi }{I} 
+\end{equation}
+
+
+In the equation above, $N$ is the number of turns of the coil, $\Phi$ is the Magnetic flux and $I$ is the current in the coil.
+We can also calculate the  self-induced $emf$ produced in the coil, after a time interval $dt$. 
+\begin{equation}
+emf = L\frac{di}{dt}
+\end{equation}
+
+\par
+The coefficient of self-inductance depends on the physical characteristics of the coil. 
+
+The flux on the coil is given by equation (3). 
+
+
+\par
+We can calculate $B$ with the formula of the magnetic field inside a solenoid:
+\begin{equation}
+B = \mu_o\frac{NI}{l} = \mu_onI
+\end{equation}
+
+\par 
+If the turns of the coils are wrapped outside of a core, the materials $\mu_o$ is going to multiply by the material's $\mu$. Substituting all of this in the initial \textbf{Inductance}'s equation:
+\begin{equation}
+L = N \frac{\Phi }{A} = N\frac{BA}{I} = N\frac{\mu_0 NI}{lI}A
+\end{equation}
+
+\par
+Canceling out the terms, the final equation for \textbf{Inductance} in a coil is:
+\begin{equation}
+L = \mu_0\frac{ N^2A}{l} \,\, \, \, or \, \, \, \, L = \mu_0 \mu_r\frac{ N^2A}{l} = \mu\frac{ N^2A}{l}, (with\, a\, nucleus)
+\end{equation}
+
+
+With this equation, it is visible that the \textbf{Inductance} is going to be dependent of the number of turns of the coil ($N$), the length ($l$) and the section's Area ($A$). With a nucleus, we have to consider the permeability of the inner material. In the equation above $\mu$ is the permeability of the material. $\mu_r = \frac{\mu}{\mu_0}$
+
+
+\par
+As referenced before, \textbf{Mutual induction} ($M$) occurs when the current is induced in a different coil that experiences the change in the magnetic field. The coefficient of Mutual Induction is (both coils in the same nucleus, length and cross-sectional areas):
+\begin{equation}
+M = k\frac{\mu_0 \mu_r N1N2A}{l} = k\sqrt[2]{L1L2}
+\end{equation}
+
+
+$k$ is the coupling factor between the two coils. For example, if a the coupling factor is 0.8, it means that 80\% of the flux lines from the first coil are penetrating the second coil.
+
+\subsubsection{Determine the auto-induction coefficient of the coil.}
+
+The auto-induction coefficient of the coil will be given by equation number (13). 
+\begin{equation}
+L = \mu_0 \mu_r\frac{ N^2A}{l} = \mu nN\pi r^2 
+\end{equation}
+
+In equation (10), $r$ is the radius of a spire, $N$ is the number of spires, $n$ is the spire's density and $\mu$ is the magnetic permeability of the ferromagnetic material.
+
+
+\subsection{We put the coil rotating without a nucleus (with angular velocity $w$), running around its axis, on a region with a magnetic field $B$ constant, perpendicular to the axis of rotation. Let $\theta$ be the angle between the plane of the coil and the direction of $B$ and $s$ Stokes Normal (unitary vector perpendicular to the the plane of the coil).  }
+
+\subsubsection{Making use of the Law of Induction of Faraday (Faraday's Law) and Stoke's theorem, determine the tension to the coil terminals.}
+
+\hspace{1cm} Voltage is the difference in electric potential between two points. The voltage (that may represent an $emf$) between two points is equal to the work done per unit of charge against an electric field to move the test charge between two points. The path between two points is $dl$. This can be any path we may consider, and in this case is a spiral as we have a coil. Applying Faraday's Law (2) to a solenoid we have:
+\begin{equation}
+\varepsilon = \oint E\cdot dl = -N\frac{d\Phi }{dt} = -\frac{d\psi}{dt}
+\end{equation}
+
+
+This means that:
+\begin{equation}
+\varepsilon = -N\int \int \frac{\partial B}{\partial t}\vec{n}dS = -N\frac{\partial }{\partial t}\int \int B\vec{n}dS
+\end{equation}
+
+
+dS is the cross-sectional area of a spire of the solenoid and $\vec{n}$ is the Stoke's vector, always perpendicular to the cross-sectional area of a spire.
+
+
+As we have $\theta = \theta_0 + wt$, by considering $\theta_0 = 0$, $\theta$ will be $\theta = wt$. Having B constant, the previous equation will be equal to:
+\begin{equation}
+-N\frac{\partial}{\partial t}(BAcos\theta ) = -N\frac{\partial }{\partial t}BAcos\left (wt  \right ) = NwBAsen\left (wt \right )
+\end{equation}
+
+By substituting by the coils' parameters:
+\begin{equation}
+NwB(\pi r^2)sen\left (wt \right )
+\end{equation}
+	
+We see that the tension in the coil terminals may be seen as a sinusoidal wave, whose frequency will be the same frequency as the frequency of rotation of the coil. Putting the frequency to Hz, we have that $f = \frac{w}{2\pi}$. 
+Because it is sinusoidal, the tension will be reversing every half turn of the coil and $Vmax = NBw\pi r^2$.
+
+So, the coil in this problem can be seen as an AC generator.
+
+
+\subsection{Consider now the model analyzed before, but now with 3 coils in rotation with an angel of $\frac{2 \pi}{3}$ between them.}
+\subsection{Write the equations of the Voltage on the coils' terminals, as well the sum of all them.}
+
+By using equation number (19), we find that the $emf$ on each coil is $-N\frac{\partial }{\partial t} BA cos(\theta _0 + wt)$. 
+
+In this situation, as the 3 coils are $\frac{2 \pi}{3}$ apart, that a coil as a $\theta_0$ of $0$, the second one $\frac{2 \pi}{3}$ and the third one $\frac{4 \pi}{3}$.
+\begin{itemize}
+\item Coil $0$
+
+$emf = NwB(\pi r^2)sen\left (wt \right )$
+\item Coil $\frac{2 \pi}{3}$
+
+$emf = NwB(\pi r^2)sen\left (\frac{2 \pi}{3}+ wt \right )$
+
+\item  Coil $\frac{4 \pi}{3}$
+
+$emf = NwB(\pi r^2)sen\left (\frac{4 \pi}{3}+ wt \right )$
+\end{itemize}
+
+Now, considering $t = 0$, the sum of the emf is going to be:
+$$\Sigma emf = NwBAsin(0) + NwBAsin(\frac{2 \pi}{3}) + NwBAsin(\frac{4 \pi}{3}) = $$
+$$NwBAsin(\frac{2 \pi}{3}) - NwBAsin(\frac{2 \pi}{3}) = 0$$
+
+As the sum is going to be zero, we conclude that there will be a point (for example the neutral in a star connection), where there will be no Voltage. This means that we cannot have currents flowing into the coils from that point, meaning that there will be no current overlaps and the current generated by the rotation of the coils will be supplied to the 3 lines that the generator supplies. So, the coils will be balanced and working properly.
+In this problem, the coils can be tough as a three-phase synchronous generator. 
+
+
+
+
+\subsection{We introduced a forth coil in the model, exited by a current $Ir$. Now, we fixed the three coils and we put a forth coil rotating inside, with a velocity $w$.}
+
+
+
+\subsubsection{Determine, in a generalized way, the flux linkage in the fixed coils, as well as the tensions on their respective terminals.}
+\hspace{1cm} If we excite a coil with DC current, a magnetic field will be created inside the coil. One side of the coil will have field lines flowing into it, and the other will have field lines escaping it. The first side will be the South Pole and the other side will be the North Pole. 
+
+The magnetic field created by the coil will be given by:
+$$B = \mu_0 I_r n_1$$
+
+The flux $\phi_1$ in the center coil will be $\mu_0 I_r n_1  A$.
+
+By setting a reference axis, the flux created by the rotating coil on the axis will be $\mu_0 I_r n_1  A cos(wt)$.
+
+When we take randomly one of the three stator coils, the flux linkage on that coil is $\psi_2 = N_2\mu_0 I_r n_1  A cos(\theta_0 + wt)$. So we conclude that the flux linkage in each coil will be:
+\begin{equation}
+\psi_2 = MI_rcos(\theta_0 + wt)
+\end{equation}
+
+The $emf$ will be minus the derivative in relation to time from the previous expression and will be given by $emf = wMI_rsin(\theta_0 + wt)$.
+
+
+By substituting $\theta_0$ by the correspondent angles(0, $\frac{2\pi}{3}$ and $\frac{4\pi}{3}$) we get the $emf$ on the coils' terminals.
+
+
+ \subsection{The last coil was substitutes by a magnet with a velocity w.}
+\subsubsection{Dimension a magnet (with material of your choice) so that you have the same Voltage to the coils' terminals.}
+\hspace{1cm} In order to have the same Voltage to the coils' terminals, the magnetic field created by the magnet will have to be similar to the magnetic field created by the coil in the previous problem and the linkage flux will have to also the same. As $\psi_2 = \int \int B\vec{n}dS$. As we had that the flux linkage was $MI_rcos(\theta_0 + wt)$, the magnetic field that we need the permanent magnet to create is $\frac{MI_rcos(\theta_0 + wt)}{A}$.
+
+When we are magnetizing a material with a field H, there's a curve called B-H which give us the relation between the H field applied to the material and the B field created by the material. 
+
+When we stop applying the exterior field, there will be $B_r$ field reminiscent on the material (intersection of the B-H curve with the B axis) and it often represents the maximum flux the magnet can deliver. 
+
+Imagine we choose a cylindrical magnet to spin between the coils. The direction of the the magnetic field will always be perpendicular to the area of the cylinder. 
+
+The field created by it, in function of the distance $x$ and the dimensions to the magnet (L, length and r, radius) will be:
+\begin{equation}
+B(x) = \frac{B_r}{2}\left ( \frac{L+x}{\sqrt{r^2+(L+x)^2}}-\frac{x}{\sqrt{r^2+x^2}} \right )
+\end{equation}
+
+First we choose a material. The material we choose, NdFeB35, at a given temperature, has a $B_r = 12300 G$.
+
+Then, we chose the magnet's dimensions as radius = 1 cm and Length = 1 cm.
+Since the equation is a ratio of dimensions, the result is the same using any unit system.
+
+By substituting by the values given:
+\begin{equation}
+B_x = 6150 ( \frac{1+x}{\sqrt{1^2+(1+x)^2}}-\frac{x}{\sqrt{1^2+x^2}}) = \frac{MI_rcos(\theta_0 + wt)}{A}
+\end{equation}
+
+Imagine that the value of $B_x$ was equal to 337.5 G. The distance that the magnet needed to be from the coils were 2 cm.
+
+Note: The $B_x$ was calculated based on this calculation:
+Having a distance x = 2 cm.
+$$B_x = (0.0548)(6150) = 337.5 G$$
+
+\subsection{Notes}
+\begin{itemize}
+\item If possible, justify and comment the obtained result in each and every question.
+\item $\theta$ may be written as $\theta = wt+ \theta_0$.
+\item In this task, in case you haven't noticed, it is present the concept of AC generator and three-phase synchronous generator.
+\item There are no images, in order to push your imagination.
+\item If you cannot solve the problem, try drawing it and simplify it until you can initiate some thinking process. If this does not result, try asking $google$ for it, about the basic elements of the theory that are described in the question.
+\item The task has to be made in $Latex$.
+\end{itemize}
+
+
+
+
+    
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
