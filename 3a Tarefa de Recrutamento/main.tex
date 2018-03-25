@@ -62,7 +62,7 @@ Assim, voltando ao circuito 1 :
 
 $$2F_1 - \phi_1 \Re_1 = 0$$
 Substituindo F por NI e colocando o valor de relutancia magnetica encontrado na pergunta anterior, temos que:
-$$\phi_1 = \phi_2 = \frac{2.315\times 10^{-7}}{l} \ [Wb]$$
+$$\phi_1 = \phi_2 = \frac{1.2\pi\times 10^{-7}}{l} \ [Wb]$$
 
 \subsubsection{Calcule a energia magnética armazenada.}
 A energia magnética armazenada pela passagem de corrente num indutor é igual à energia necessaria para produzir essa mesma corrente nesse mesmo indutor.
@@ -71,13 +71,44 @@ $$W_m = \frac{1}{2}[\psi_1 \ \psi_2 \ \psi_3][I_1 \ I_2 \ I_3]^{T} = \frac{1}{2}
 
 Como $N_1 = N_2 = N_3$ e $I_1 = I_2 = I_3$ temos que:
 $$W_m = [\phi_1  \ \phi_2  \ \phi_3 ]\frac{NI}{2} = 375 [\phi_1  \ \phi_2  \ \phi_3 ] = 375 [\phi_1  \ \phi_2] = 375\times 2\times \phi_1 $$
-Pegando no calculado na alinea anterior, temos que a Energia magnetica armazenada vai ser $\frac{1.7\times 10^{-4}}{l} [J]$
+Pegando no calculado na alinea anterior, temos que a Energia magnetica armazenada vai ser $\frac{900\pi\times 10^{-7}}{l} [J]$
+
+Calculou-se a Energia magnética armazenada pelo indutor. Essa Energia vai ser a mesma Energia guardada no circuito.
+
+Essa energia é dada por:
+$$W_m = \int wmdV$$
+wn pode ser definido como a densidade volumétrica de Energia Magnética e é dada por:
+$$wn = \frac{BH}{2}$$.
+Assim:
+$$Wm = \frac{BHAl}{2} = \frac{B^{2}Al}{2 \mu_0}$$
+
+Como a permeabilidade do material do núcleo é infinita, o campo magnético H vai ser nulo em toda a região do material.
+
+Assim, vemos que no circuito a energia magnetica só poderá ser armazenada nos airgaps. 
+Com o calculado na alínea anterior, $\phi_3$ é zero, logo a densidade de fluxo magnético B vai ser zero, não havendo Energia magnética armazenada no Air Gap R2.
+
+Assim resta o Air Gap R1 para armazenamento da Energia Magnética estando assim toda a Energia Magnética Armazenada lá.
+
+$$Wm = \frac{B^{2}Al}{\mu_0} = \frac{\phi^{2}Al}{2A^{2}\mu_0} = \frac{(1.2\pi \times 10^{7})^{2}}{2 Al \mu_0} = 2.83 \times 10 ^{-4} J$$
+
+Ou seja, calculando pelos dois métodos, embora distintos obtemos o mesmo resultado.
+ 
 
 \subsubsection{Calcule a Indutância da fase e verifique o resultado da alinea anterior.}
+
+Temos que $L = \frac{\Psi}{I}$ 
+O fluxo ligado da fase pode ser dado como o somatório dos fluxos ligados das 3 bobinas. Como $\Psi_3 = 0$, temos que:
+$$\sum \Psi = \Psi_1 + \Psi_2 = N(\phi_1 + \phi_2) = 2N\phi_1$$
+
+$$L = \frac{2N\phi_1}{I} = \frac{800\pi \times 10^{-7}}{l} H$$
+
+
 Como vimos na alínea anterior: 
 $$W_m = \frac{1}{2}LI^{2}$$
 Assim:
-$$L = \frac{2W_m}{I^{2}} = \frac{3.78 \times 10^{-4}}{l} {H}$$
+$$L = \frac{2W_m}{I^{2}} = \frac{800\pi \times 10^{-7}}{l} {H}$$
+
+Assim, confirmamos a Indutância da fase.
 \subsection{A seguinte figura contém um desenho de um motor IPM (significado: Interior Permanent Magnets) com as respectivas dimensoes assinaladas.}
 
 \subsubsection{Desenhe o cirucito magnético equivalente e identifique as relutâncias com nomes apropriados, tal como os respectivos fluxos.}
