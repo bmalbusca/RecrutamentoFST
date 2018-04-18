@@ -1,0 +1,118 @@
+\documentclass[a4paper]{article}
+
+%% Language and font encodings
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+
+\usepackage{amssymb} 
+
+%% Sets page size and margins
+\usepackage[a4paper,top=3cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+
+%% Useful packages
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+
+\title{Terceiro Trabalho Recrutamento de Motores}
+\author{Teodoro Dias}
+
+\begin{document}
+\maketitle
+
+
+\section{Calcule a tensão aos terminais da fase composta pelas 3 bobinas}
+
+Sendo que a corrente que está a passar pelas três bobinas é de 1.5A e que a resistência total das três bobinas é igual a 50$\Omega$, podemos utilizar a Lei de Ohm ($V = RI$) para calcular a tensão aos terminais da fase. Assim sendo:
+
+\begin{equation}
+V = RI = 50*1.5 = 75V
+\end{equation}
+
+\section{Defina o conceito de relutância magnética. Calcule as relutâncias magnéticas do circuito magnético correspondente à geometria estudada}
+
+O conceito de relutância magnética é análogo ao conceito de resistência num circuito eléctrico. Da mesma forma que num circuito eléctrico a corrente tende a seguir o caminho de menor resistência, num circuito magnético, o fluxo magnético tende a seguir o caminho com menor relutância magnética. Ou seja, é a obstrução que um circuito magnético oferece ao fluxo magnético. Ao contrário da resistência eléctrica, que dissipa a energia eléctrica sob a forma de calor, a reluctância magnética, a reluctância de um circuito magnético armazena a energia magnética. A sua unidade é o inverso do Henry ($H^{-1}$).
+
+A fórmula matemática para o seu cálculo é a seguinte:
+
+\begin{equation}
+\mathcal{R} = \frac{l}{\mu_r\mu_0A}
+\end{equation}
+
+onde:
+
+A é a área de secção transversal,\\
+l é o comprimento do circuito,\\
+$\mu_0$ é a permeabilidade do vácuo,\\
+$\mu_r$ é a permeabilidade magnética relativa do material\\
+
+No material, uma vez que a sua permeabilidade magnética relativa é infinita, a relutância magnética será 0.\\ 
+Haverá, apenas, relutância magnética nos entreferros (zona sem material, são ambas idênticas uma vez que a secção é a mesma). Esta será igual a:
+
+\begin{equation}
+\mathcal{R}_{entreferros} = \frac{l}{\mu_r \mu_0 A} = \frac{l}{\mu_0 A} = \frac{l}{4\pi*10^{-7}*0,0002} H^{-1}
+\end{equation}
+
+\section{Calcule os fluxos magnéticos existentes no circuito}
+
+Da Lei de Ampère, que fazem parte das equações de Maxwell temos:
+
+\begin{equation}
+\oint {H d \vec{l}} = \int{ \int{ \vec{J} \vec{n} dS}}
+\end{equation}
+
+H é constante porque o fluxo é constante, a secção é contante e a permeabilidade magnético do material também o é.
+Estabelecendo o sentido do fluxo como o sentido horário e o nó a estudar como o nó em 2 ($\Phi_2$), temos:
+
+\begin{equation}
+\left\{\begin{matrix}
+\Phi_2 = - \Phi_3 + \Phi_1\\ 
+(R_{ar}+R_m)\Phi_1 + (R_{ar}+R_m)\Phi_2 = N_1I + N_2I\\ 
+-(R_{ar}+R_m)\Phi_2 + R_m\Phi_3 = -N_2I + N_3I
+\end{matrix}\right.
+\end{equation}
+
+Resolvendo o sistema de equações, conlcuimos que $\Phi_2 = 0$ e que $\Phi_1 = \Phi_3 = \frac{(N_1 + N_2)I}{R_ar} = \frac{1,2\pi*10^{-7}}{l} Wb$
+
+\section{Calcule a energia magnética armazenada}
+
+Para calcular a energia magnética armazenada temos que:
+
+\begin{equation}
+\int{	\int{	\int_V {\hat{w} dV}}} = \int{ \int{	\int{ \frac{1}{2} BH dV}}} <=> W_m = \frac{1}{2}[I_1 \ I_2 \ I_3][L][i_1 \ i_2 \ i_3]^{T} = \frac{1}{2}NI [\Phi_1 \Phi_3]
+\end{equation}
+
+Concluímos que $W_m = 750 * \Phi_1 = \frac{900\pi*10^{-7}}{l} J$.
+
+\section{Calcule a Indutância da fase e verifique o resultado da alinea anterior}
+
+A indutância é dada como o fluxo ligado a dividir pela corrente, $L = \frac{\Psi}{I} $. Neste caso, uma vez que o fluxo 2 é igual a zero, a indutância da fase será igual à soma do  fluxo ligado 1 com o fluxo ligado 3 a dividir por 3. Isto é:
+
+\begin{equation}
+L = \frac{N\Phi_1 + N\Phi3}{I} = 2*\frac{0,8\pi*10^{-7}}{l} = \frac{1,6\pi*10^{-7}}{l} H
+\end{equation}
+
+\section{Desenhe o cirucito magnético equivalente e identifique as relutâncias com nomes apropriados, tal como os respectivos fluxos}
+
+O circuito equivalente pode ser visto na seguinte imagem:
+
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.5\textwidth]{equivalente.png}
+\caption{\label{fig:equivalente}Circuito equivalente do motor}
+\end{figure}
+
+Onde:
+
+$R_r$ é a relutância magnética do rotor,
+$R_g$ é a relutância magnética do air gap,
+$R_S$ é a relutância magnética do rotor,
+$R_i$ é a relutância magnética dos ímanes,
+$F_1$ representa o fluxo do ímane com pólo positivo virado para o air gap e
+$F_2$ representa o fluxo do ímane com pólo negativo virado para o air gap.
+
+
+\end{document}
