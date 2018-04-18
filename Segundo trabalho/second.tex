@@ -1,0 +1,318 @@
+\documentclass[a4paper]{article}
+
+%% Language and font encodings
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+
+\usepackage{amssymb} 
+
+%% Sets page size and margins
+\usepackage[a4paper,top=3cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+
+%% Useful packages
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+
+\title{Segundo Trabalho Recrutamento de Motores}
+\author{Teodoro Dias}
+
+\begin{document}
+\maketitle
+
+\begin{center}
+\section*{O Problema} 
+\end{center}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.5\textwidth]{espira.png}
+\caption{\label{fig:espira}Espira quadrada de lado l no campo magnético $\vec{B}$}
+\end{figure}
+
+\section{ Defina o que é a força electromotriz}
+
+A força electromotriz, representada pela letra grega Épsilon, $\epsilon$, é a propriedade que um qualquer dispositivo tem de produzir corrente eléctrica num circuito. A sua unidade no sistema internacional é o Volt ( J/C - não confundir a força electromotriz com a diferença de potencial, apesar de terem a mesma unidade de medida, o Volt ). Michael Faraday definiu-a o seu módulo como sendo igual à razão entre a variação do fluxo magnético no circuito, pelo intervalo de tempo em que a variação ocorre. Matematicamente, pode ser escrita da seguinte forma: 
+
+\begin{equation} 
+\epsilon = \frac{|\Delta \Phi |}{\Delta t}
+\end{equation}
+
+Mais tarde, devido à Lei de Lenz, que afirma que a força electromotriz induzida se opõe à variação do fluxo, costuma-se escrever a fórmula da força electromotriz induzida da seguinte forma: 
+
+\begin{equation} 
+\epsilon = -\frac{\Delta \Phi }{\Delta t}
+\end{equation}
+
+\section{Determine a expressão da força electromotriz induzida na espira e indique o sentido da corrente induzida. Assuma que a força electromotriz só existe durante 1}
+
+A partir da expressão 1 iremos calcular a expressão da força electromotriz induzida. Iremos ter em conta a Lei de Lenz (equação 2) quando indicarmos o sentido da corrente induzida. Começando pela expressão da força electromotriz induzida:
+
+\subsection{Determinação da expressão do fluxo magnético}
+
+O fluxo magnético é representado pela letra grega Phi, $\Phi$. Matematicamente, a fórmula para o seu cálculo é dada por:
+
+\begin{equation} 
+\Phi = \int_{S} \vec{B}\,.\,\vec{dA}
+\end{equation}
+
+Para calcular a força electromotriz induzida iremos desenvolver a equação do fluxo magnético (equação 3):
+
+\begin{equation} 
+\Phi = \vec{B}\,.\,\vec{A} = BAcos( \theta )
+\end{equation}
+
+$\theta$ é o ângulo entre a normal da superfície da espira com o campo magnético, $\vec{B}$.
+
+\subsection{Determinação do fluxo magnético}
+
+Admitindo que o ângulo $\theta$ é zero, isto é, a normal da superfície da espira é paralela e tem o mesmo sentido que $\vec{B}$:
+
+\begin{equation} 
+\Phi = BA
+\end{equation}
+
+A é igual à área da espira, pelo que:
+
+\begin{equation} 
+A = l*l = l^2
+\end{equation}
+
+e
+
+\begin{equation} 
+B = B_0t
+\end{equation}
+
+logo:
+
+\begin{equation} 
+\Phi = B_0tl^2
+\end{equation}
+
+\subsection{Determinação da expressão da força electromotriz induzida}
+
+A partir da equação 2 e da equação 8, temos agora capacidade para determinar a expressão da força electromotriz induzida. Sabendo que t = 1s:
+
+\begin{equation} 
+\epsilon = -\frac{\Delta \Phi }{\Delta t} = -\frac{B_0*1*l^2 - B_0*0*l^2}{1-0} = -B_0l^2
+\end{equation}
+
+\subsection{Sentido da corrente induzida}
+
+De notar que, o sinal menos na equação anterior (equação 9) é devida à Lei de Lenz e apenas nos indica que a força electromotriz induzida opõe-se à variação do fluxo. Assim, a corrente induzida na espira terá um sentido de tal forma que, o campo criado por esta corrente, contrarie o campo magnético $\vec{B}$. Esse sentido é o contrário ao ponteiro dos relógios e pode ser visto na figura 2.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.5\textwidth]{sentido.png}
+\caption{\label{fig:sentido}Sentido da corrente induzida}
+\end{figure}
+
+\section{Sabendo que a diferença de potencial medida pelo voltímetro é 5 uV, calcule o valor de $B_0$}
+
+Tendo determinado na equação 9 a expressão da força electromotriz induzida e sabendo que a queda de tensão nas quatro resistências é medida pelo voltímetro (ou seja, a força electromotriz induzida é igual a 5$\mu$V), podemos calcular o valor de $B_0$:
+
+\begin{equation} 
+\epsilon = -B_0l^2 \leftrightarrows  -5\mu V = -B_0l^2 \leftrightarrows B_0 = \frac{5 \mu}{l^2} T
+\end{equation}
+
+\section{Se retirar a espira do banho num campo B e se esta for percorrida por uma corrente I, determine o campo magnético no interior da espira}
+
+	O problema da espira quadrada pode ser analisada como a junção de quatro fios finitos, isto é, o campo magnético no interior da espira será igual à multiplicação pelo campo magnético criado por um fio finito, num ponto que dista metade do comprimento total do fio finito (l/2), tando, de acordo com, o eixo dos x's e o dos y's, supondo que a espira se encontra no plano x0y.
+
+Para analisar o campo magnético criado por um fio finito, iremos recorrer à Lei de Biot-Savart (não poderemos recorrer à Lei de Ampere, porque não iremos aproximar o fio com um fio infinito).
+
+\subsection{Lei de Biot-Savart}
+
+A Lei de Biot-Savart é uma equação que descreve o campo magnético gerado por uma currente estacionária. A equação, de acordo com as unidades SI, pode ser escrita da seguinte forma: 
+
+\begin{equation} 
+\mathbf{B}(\mathbf{r}) = \frac{\mu_0}{4\pi} \int_C \frac{I d\mathbf l\times\mathbf{r'}}{|\mathbf{r'}|^3}
+\end{equation}
+
+\subsection{Desenvolvimento da Lei de Biot-Savart e resolução do problema}
+
+Iremos admitir que o nosso 0 será o centro do fio finito. Assim sendo, uma das pontas do fio encontra-se em -l/2 e a outra em l/2. Analisando o fio como na figura 3, temos:
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.5\textwidth]{fio.png}
+\caption{\label{fig:fio}Análise do problema do fio finito de acordo com a Lei de Biot-Savart}
+\end{figure}
+
+\begin{equation} 
+\mathbf{B}(\mathbf{r}) = \frac{\mu_0I}{4\pi} \int \frac{d\mathbf x}{r^2} \sin(\theta) = \frac{\mu_0I}{4\pi} \int \frac{d\mathbf x}{R^2+X^2} \cdot \frac{R}{\sqrt[2]{R^2+X^2}} = \frac{\mu_0IR}{4\pi} \int_{\frac{-l}{2}}^{\frac{l}{2}} \frac{1}{(R^2+X^2)^\frac{3}{2}} d\mathbf x = 
+\frac{\mu_0IR}{4\pi} (\frac{X}{R^2\sqrt[2]{R^2+X^2}})\Big|_\frac{-l}{2}^\frac{l}{2} 
+\end{equation}
+
+Sabendo que R é igual a metade do comprimento total do fio, isto é: $R = \frac{l}{2}$ podemos resolver a equação anterior (equação 12):
+
+\begin{equation} 
+\mathbf{B}(\mathbf{r}) = \frac{\mu_0I}{4\pi\frac{l}{2}}(\frac{\frac{l}{2}}{\sqrt[2]{\frac{l}{2}^2+\frac{l}{2}^2}} - \frac{\frac{-l}{2}}{\sqrt[2]{\frac{l}{2}^2+\frac{-l}{2}^2}}) = \frac{\mu_0I}{\pi l\sqrt[2]{2}} 
+\end{equation}
+
+Finalmente, como foi dito inicialmente, o campo magnético no interior da espira será igual a 4 vezes o campo criado por cada um dos fios finitos à distância de $\frac{l}{2}$ . Assim sendo:
+
+\begin{equation} 
+\textrm{campo magnético interior espira}  = 4 \cdot \mathbf{B}(\mathbf{r}) = \frac{4\mu_0I}{\pi l\sqrt[2]{2}}
+\end{equation}
+
+\section{Qual é a definição de permeabilidade magnética?}
+
+A permeabilidade magnética é a medida da abilidade que um certo material tem em criar um campo magnético no seu interior, ou seja, é o grau de de magnetização que um material obtém em resposta a um campo magnético aplicado neste. É representado pela letra grega mi, $\mu$.
+
+\section{Qual é a definição de coeficiente de auto-indução? E a definição de coeficiente de auto-indução mútuo?}
+
+Quando um conductor está a ser percorrido por uma corrente I, este produz um campo magnético. Este campo magnético criado pelo conductor circunda o conductor. Este campo magnético vai, por sua vez, criar um um fluxo no próprio conductor. Se a corrente I for variável, o campo que este conductor cria também será variável e, por sua vez, o fluxo que o campo magnético produz no conductor também será variável. Como vimos anteriormente, isto irá criar uma força electromotriz induzida no conductor (irá existir uma corrente induzida). A este fenómeno dá-se o nome de auto-indução.
+
+A corrente inicial, I, irá produzir um campo magnético de indução magnética B proporcional a I. O fluxo é proporcional a B. Logo, o fluxo é proporcional a i. Matematicamente:
+
+\begin{equation} 
+L = \frac{\Phi}{I}
+\end{equation}
+
+Se, junto a este conductor (A) existir outro conductor (B), o conductor B será circundado também pelo campo magnético originado pelo conductor A. Se a mesma situação anterior acontecer, isto é, o conductor A for percorrido por uma corrente variável no tempo, será originado, também, uma força electromotriz induzida no conductor B, uma corrente induzida, consequentemente. Se B for, também, percorrido por uma corrente, I2, variável no tempo, irá criar uma força electromotriz induzida no conductor A e, portanto, uma corrente induzida. A este fenómeno, em que os dois conductores originam um no outro uma corrente induzida, dá-se o nome de auto-indução mútuo. Matematicamente:
+
+\begin{equation} 
+M_{21} = \frac{\Phi_{21}}{I}
+\end{equation}
+
+Onde $M_{21}$ é o coeficiente de auto-indução mútuo, I a corrente que circula no conductor A e $\Phi_{21}$ o fluxo induzido em B pelo campo magnético originado por A.
+
+\section{Determine o coeficiente de auto-indução da bobina}
+
+Numa bobina, o coeficiente de auto-indução ao total dos coeficientes de auto-indução de cada uma das espiras, ou seja:
+
+\begin{equation} 
+L_{bobina} = N \cdot \frac{\Phi}{I}
+\end{equation}
+
+A partir da equação 5 e sabendo que o ângulo entre a normal das espiras e o campo magnético é 0, temos:
+
+\begin{equation} 
+L_{bobina} = N \cdot \frac{BA}{I}
+\end{equation}
+
+Sendo que no interior da bobina temos um núcleo de material ferromagnético (e a partir da Lei de Ampère), temos que:
+
+\begin{equation} 
+B = \mu \mu_0 H = \mu \mu_0 \frac{N \cdot I}{L}
+\end{equation}
+
+E, a partir da equação 17 e da equação 19 temos que:
+
+\begin{equation} 
+L_{bobina} = N \cdot \frac{\mu \mu_0 \frac{N \cdot I A}{L}}{I} = \mu \mu_0 N^2 \frac{\pi r^2 I}{L}
+\end{equation}
+
+\section{Utilizando a Lei de indução (Lei de Faraday) e o teorema de stokes, determine a tensão aos terminais da bobina}
+
+A Lei de Faraday relaciona a força electromotriz com a taxa de variação do fluxo magnético temporalmente. Matematicamente:
+
+\begin{equation} 
+\oint \vec{E} \,\vec{d}s = - \frac{d \Phi}{dt}
+\end{equation}
+
+Da equação 2 e da equação anterior (equação 21), que é a Lei de Lenz, podemos relacionar a força electromotriz induzida com o campo eléctrico. 
+
+Do teorema de Stokes vem que:
+
+\begin{equation} 
+\Phi = \iint_S \vec{B} \cdot \vec{n} \,dS
+\end{equation}
+
+Finalmente, temos que:
+
+\begin{equation} 
+\epsilon = - \iint_S \frac{\vec{B}}{dt} \cdot \vec{n} \,dS = - \frac{d}{dt} \iint_S \vec{B} \cdot \vec{n} \,dS = - \frac{BA\cos(\theta)}{dt} = -BA \frac{\cos(\theta)}{dt} = -BA(-\sin(\theta)\frac{d\theta}{dt})
+\end{equation}
+
+$\theta$ é o ângulo que a normal da espira faz com o campo magnético e é dado por $\theta = \omega t + \theta_0$. Neste caso $\theta_0$ é igual a 0. Então:
+
+\begin{equation} 
+\epsilon = -BA(-\sin(\omega t)\frac{d\omega t}{dt}) = BA\sin(\omega t)\omega
+\end{equation}
+
+Para a bobina, teremos N espiras, portanto o valor da tensão aos terminais da bobina será dado por: 
+
+\begin{equation} 
+\epsilon_{bobina} = N\epsilon = NBA\omega\sin(\omega t) = NB(\pi r^2)\omega\sin(\omega t)
+\end{equation}
+
+\section{Escreva as equações das tensões aos terminais de cada bobina. Determine o somatório das tensões aos terminais das bobinas}
+
+A fase de cada uma das bobinas está desfasada de $\frac{2\pi}{3}$. Neste caso, $\theta_{0 1}$ ($\theta$ da bobina 1) será 0, o da bobina 2 será $\theta_{0 2} = \frac{2\pi}{3}$ e o da bobina 3 será $\theta_{0 3} = \frac{-2\pi}{3}$. \\
+
+$\epsilon_{bobina 1} = NB(\pi r^2)\omega\sin(\omega t)$ \\
+$\epsilon_{bobina 2} = NB(\pi r^2)\omega\sin(\omega t + \frac{2\pi}{3})$ \\
+$\epsilon_{bobina 3} = NB(\pi r^2)\omega\sin(\omega t + \frac{-2\pi}{3})$ \\
+
+A soma das tensões das bobinas será igual a:
+
+\begin{equation} 
+\Sigma bobinas = NB(\pi r^2)\omega\sin(\omega t) + NB(\pi r^2)\omega\sin(\omega t + \frac{2\pi}{3}) + NB(\pi r^2)\omega\sin(\omega t + \frac{-2\pi}{3}) = 0
+\end{equation}
+
+\section{Determine , de forma generalizada, o fluxo ligado nas bobinas fixas, tal como as tensões aos seus terminais}
+
+A bobina a girar irá criar um campo magnético giratório (isto é, o campo magnético não é fixo e irá depender do ângulo entre a normal da bobina e um referencial 0). O campo magnético criado por esta bobina será: 
+
+\begin{equation} 
+B = \frac{\mu_0 N_4 I_r}{l} 
+\end{equation}
+
+O fluxo criado por esta bobina será, portanto:
+
+\begin{equation} 
+\Phi_4 = \frac{\mu_0 N_4 I_r A \cos(\omega t + \theta_0)}{l}  
+\end{equation}
+
+O fluxo criado por esta bobina nas outras bobinas, o fluxo ligado, será igual a:
+
+\begin{equation} 
+\psi_{bobinas} = N\frac{\mu_0 N_4 I_r A \cos(\omega t + \theta_0)}{l}  
+\end{equation}
+
+Sendo que cada bobina está desfasada $\frac{2\pi}{3}$ teremos para cada bobina:\\
+
+$\psi_{bobina 1} = N\frac{\mu_0 N_4 I_r A \cos(\omega t)}{l}$\\
+$\psi_{bobina 2} = N\frac{\mu_0 N_4 I_r A \cos(\omega t + \frac{2\pi}{3})}{l}$\\
+$\psi_{bobina 3} = N\frac{\mu_0 N_4 I_r A \cos(\omega t - \frac{2\pi}{3})}{l}$\\
+
+Sabendo que $\epsilon = -\frac{d\psi}{dt}$, podemos calcular a tensão ao terminal de cada uma das bobinas.
+
+$\psi_{bobina 1} = N\omega\frac{\mu_0 N_4 I_r A \sin(\omega t)}{l}$\\
+$\psi_{bobina 2} = N\omega\frac{\mu_0 N_4 I_r A \sin(\omega t + \frac{2\pi}{3})}{l}$\\
+$\psi_{bobina 3} = N\omega\frac{\mu_0 N_4 I_r A \sin(\omega t - \frac{2\pi}{3})}{l}$\\
+
+ \section{Dimensione um íman (de material à sua escolha) para que tenha a mesma tensão aos terminais da bobina}
+ 
+De forma a que a tensão aos terminais do íman seja idêntica à tensão aos terminais da bobina, o campo magnético criado por ambos tem que ser idêntico.
+
+Iremos escolher um íman de neodímio (ímanes com maior campo remanescente) e de classe N48, tendo magnetismo residual entre 1.37 a 1.42 Teslas (iremos usar 1.4T). Iremos usar um íman cílindrico (forma mais parecida com uma bobina).
+
+A fórmula para o cálculo do campo criado por um íman cílindrico é a seguinte:
+
+\begin{equation}
+B(x) = \frac{B_r}{2}( \frac{D+z}{\sqrt{R^2+(D+z)^2}}-\frac{z}{\sqrt{R^2+z^2}})
+\end{equation}
+
+onde:\\
+$B_r$ é o campo remanescente - no nosso caso tomaremos 1.4T//
+z é a distância às faces dos pólos do ímane
+D é a altura do íman//
+R é o raio do íman//
+
+Para dimensionar o ímane, bastaria saber o número de espiras da bobina, o seu comprimento e a corrente $I_r$.
+
+Se assumirmos que a bobina tem 500 espiras, comprimento de 10cm e a corrente $I_r$ é igual a 1A teremos:
+
+\begin{equation}
+\frac{B_r}{2}( \frac{D+z}{\sqrt{R^2+(D+z)^2}}-\frac{z}{\sqrt{R^2+z^2}}) = \frac{\mu_0 N_4 I_r}{l} = \frac{500*1*\mu_0}{0.1} = 0,0063T
+\end{equation}
+
+Um ímane cilíndrico de neodímio N48 com raio de 5mm e altura de 6mm seria capaz de substituir a bobina.
+
+\end{document}
